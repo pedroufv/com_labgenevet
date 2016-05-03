@@ -38,43 +38,6 @@ $doc->addStyleSheet(JUri::base() . '/components/com_labgenevet/assets/css/labgen
         });
     } else {
         jQuery(document).ready(function () {
-
-            // when any option from country list is selected
-            jQuery("select[id='jform_animals_species']").change(function(){
-
-                // get the selected option value of country
-                var optionValue = jQuery("select[id='jform_animals_species']").val();
-
-                jQuery.ajax({
-                    type: "POST",
-                    url: "index.php?option=com_labgenevet&task=populateBreeds",
-                    data: ({specie: optionValue, status: 1}),
-                    beforeSend: function(){ jQuery("#ajaxLoader").show(); },
-                    complete: function(){ jQuery("#ajaxLoader").hide(); },
-                    dataType: 'json',
-                    success: function(response){
-                        var options = jQuery("select[id='jform_animals_breed']");
-                        jQuery.each(response, function() {
-                            options.append(jQuery("<option />").val(this.value).text(this.breed));
-                            options.trigger("liszt:updated");
-                        });
-                    }
-                });
-            });
-
-            var valorTotal = 0;
-            jQuery(".checkexam").change(function() {
-                var id = this.id;
-                var labelText = jQuery("label[for="+id+"]").text();
-                var price = parseFloat(labelText.split('$')[1]);
-                if(this.checked) {
-                    valorTotal = valorTotal + price;
-                } else {
-                    valorTotal = valorTotal - price;
-                }
-                jQuery('#total').html(valorTotal.toFixed(2));
-            });
-
             jQuery('#form-request').submit(function (event) {
 
             });
@@ -196,7 +159,6 @@ $doc->addStyleSheet(JUri::base() . '/components/com_labgenevet/assets/css/labgen
             <div class="control-label"><?php echo $this->form->getLabel('species', 'animals'); ?></div>
             <div class="controls"><?php echo $this->form->getInput('species', 'animals'); ?></div>
         </div>
-        <div id="ajaxLoader" style="display:none"><img src="components/com_labgenevet/assets/images/ajax-loader.gif" alt="loading..."></div>
         <div class="control-group">
             <div class="control-label"><?php echo $this->form->getLabel('breed', 'animals'); ?></div>
             <div class="controls"><?php echo $this->form->getInput('breed', 'animals'); ?></div>

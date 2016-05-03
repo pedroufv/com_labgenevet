@@ -86,14 +86,10 @@
             <option value=""></option>
         </field>
         <field name="breed"
-               type="sql"
+               type="text"
                label="COM_LABGENEVET_FORM_LBL_BREED"
                description="COM_LABGENEVET_FORM_DESC_BREED"
-               required="true"
-               query="SELECT id AS value, title AS breed FROM #__labgenevet_breeds"
-               multiple="single"
-               class="inputbox">
-            <option value=""></option>
+               required="true">
         </field>
         <field name="owner"
                type="text"

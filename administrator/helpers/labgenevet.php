@@ -50,11 +50,6 @@ class LabgenevetHelper {
             'index.php?option=com_labgenevet&view=species',
             $vName == 'species'
         );
-        JHtmlSidebar::addEntry(
-            JText::_('COM_LABGENEVET_BREEDS'),
-            'index.php?option=com_labgenevet&view=breeds',
-            $vName == 'breeds'
-        );
     }
 
     /**
