@@ -1,0 +1,8 @@
+@media print {
+    .component{
+        margin: 50px 10px;
+    }
+    a[href]:after {
+        content: none;
+    }
+}

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields>
+        <field name="id"
+               type="text"
+               default="0"
+               label="COM_LABGENEVET_FORM_LBL_ID"
+               readonly="true"
+               class="readonly"
+               description="JGLOBAL_FIELD_ID_DESC"
+        />
+        <field name="info"
+               type="textarea"
+               label="COM_LABGENEVET_FORM_LBL_INFO"
+               description="COM_LABGENEVET_FORM_DESC_INFO"
+               filter="safehtml"
+        />
+        <field name="urgent"
+               type="checkbox"
+               label="COM_LABGENEVET_FORM_LBL_URGENT"
+               description="COM_LABGENEVET_FORM_DESC_URGENT"
+               value="1"
+               default="0"
+        />
+        <field name="aware"
+               type="note"
+               class="alert"
+               close="true"
+               description="COM_LABGENEVET_FORM_DESC_URGENT"
+        />
+        <field name="created"
+               type="calendar"
+               label="COM_LABGENEVET_FORM_LBL_CREATED"
+               description="COM_LABGENEVET_FORM_DESC_CREATED"
+               format="%Y-%m-%d %H:%M:%S"
+               size="22"
+               filter="user_utc"
+        />
+        <field name="situationsid"
+               type="sql"
+               label="COM_LABGENEVET_FORM_LBL_SITUATION"
+               description="COM_LABGENEVET_FORM_DESC_SITUATION"
+               required="true"
+               query="SELECT id AS value, title AS situationsid FROM #__labgenevet_situations"
+               multiple="single"
+               class="inputbox"
+        />
+        <field name="created_by" type="vet" default=""
+               label="COM_LABGENEVET_FORM_LBL_CREATED_BY"
+               description="COM_LABGENEVET_FORM_DESC_CREATED_BY"
+        />
+        <field name="result"
+               type="file"
+               label="COM_LABGENEVET_FORM_LBL_RESULT"
+               description="COM_LABGENEVET_FORM_DESC_RESULT"
+               size="10"
+        />
+        <field  name="state"
+                type="list"
+                label="JSTATUS"
+                description="JFIELD_PUBLISHED_DESC"
+                class="inputbox"
+                size="1"
+                default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="2">JARCHIVED</option>
+            <option value="-2">JTRASHED</option>
+        </field>
+        <field name="checked_out" type="hidden" filter="unset"/>
+        <field name="checked_out_time" type="hidden" filter="unset"/>
+    </fields>
+    <fields name="animals">
+        <field name="id" type="hidden"/>
+        <field name="name"
+               type="text"
+               label="COM_LABGENEVET_FORM_LBL_NAME"
+               description="COM_LABGENEVET_FORM_DESC_NAME"
+               required="true"
+               filter="safehtml"
+        />
+        <field name="age"
+               type="integer"
+               label="COM_LABGENEVET_FORM_LBL_AGE"
+               description="COM_LABGENEVET_FORM_DESC_AGE"
+               required="true"
+               first="1"
+               last="50"
+               step="1"
+        />
+        <field name="gender"
+               type="radio"
+               required="true"
+               class="btn-group"
+               label="COM_LABGENEVET_FORM_LBL_GENDER"
+               description="COM_LABGENEVET_FORM_DESC_GENDER" >
+            <option value="m">COM_LABGENEVET_OPTION_GENDER_MALE</option>
+            <option value="f">COM_LABGENEVET_OPTION_GENDER_FEMALE</option>
+        </field>
+        <field name="species"
+               type="sql"
+               label="COM_LABGENEVET_FORM_LBL_SPECIE"
+               description="COM_LABGENEVET_FORM_DESC_SPECIE"
+               required="true"
+               query="SELECT id AS value, title AS species FROM #__labgenevet_species"
+               multiple="single"
+               class="inputbox">
+            <option value=""></option>
+        </field>
+        <field name="breed"
+               type="sql"
+               label="COM_LABGENEVET_FORM_LBL_BREED"
+               description="COM_LABGENEVET_FORM_DESC_BREED"
+               required="true"
+               query="SELECT id AS value, title AS breed FROM #__labgenevet_breeds"
+               multiple="single"
+               class="inputbox">
+            <option value=""></option>
+        </field>
+        <field name="owner"
+               type="text"
+               label="COM_LABGENEVET_FORM_LBL_OWNER"
+               description="COM_LABGENEVET_FORM_DESC_OWNER"
+               required="true"
+               filter="safehtml"
+        />
+    </fields>
+    <fields>
+        <fieldset name="accesscontrol">
+            <field name="asset_id" type="hidden" filter="unset"/>
+            <field name="rules"
+                   type="rules"
+                   label="JFIELD_RULES_LABEL"
+                   translate_label="false"
+                   filter="rules"
+                   validate="rules"
+                   class="inputbox"
+                   component="com_labgenevet"
+                   section="container"
+            />
+        </fieldset>
+    </fields>
+</form>

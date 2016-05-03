@@ -1,0 +1,57 @@
+.icon-48-exams {
+      background-image: url(../images/l_exams.png);
+      padding-left:60px!important;
+}
+
+.icon-48-exam {
+      background-image: url(../images/l_exams.png);
+      padding-left:60px!important;
+}
+
+.icon-48-containers {
+    background-image: url(../images/l_containers.png);
+    padding-left:60px!important;
+}
+
+.icon-48-container {
+    background-image: url(../images/l_containers.png);
+    padding-left:60px!important;
+}
+
+.icon-48-situations {
+    background-image: url(../images/l_situations.png);
+    padding-left:60px!important;
+}
+
+.icon-48-situation {
+    background-image: url(../images/l_situations.png);
+    padding-left:60px!important;
+}
+
+.other-filters{
+    padding: 0 14px;
+}
+
+#jform_containerslist ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#jform_containerslist li {
+    float: left;
+}
+
+#jform_containerslist li label {
+    display: block;
+    padding: 1px 18px;
+}
+
+.exam-category label {
+    font-weight: bold;
+}
+
+.exam-checkboxes fieldset ul li input {
+    margin: 2px 6px;
+}

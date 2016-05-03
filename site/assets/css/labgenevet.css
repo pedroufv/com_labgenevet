@@ -1,0 +1,69 @@
+legend {
+    border: 1px solid #e5e5e5 !important;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color -moz-use-text-color #e5e5e5;
+    border-image: none;
+    border-style: none none solid;
+    border-width: 0 0 1px !important;
+    color: #333;
+    display: block;
+    font-size: 19.5px;
+    line-height: 36px;
+    margin-bottom: 7px;
+    padding: 0;
+    width: 100%;
+    margin-top: 15px;
+}
+.control-label {
+    font-weight:bold;
+}
+#jform_containerslist input {
+    width: auto;	
+}
+#jform_containerslist ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#jform_containerslist li {
+    float: left;
+}
+
+#jform_containerslist li label {
+    display: block;
+    padding: 1px 18px;
+}
+
+#jform_containerslist li input {
+    float: left;
+}
+
+.exam-category label {
+    font-weight: bold;
+}
+
+.exam-checkboxes fieldset ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.exam-checkboxes li {
+    float: left;
+}
+
+.exam-checkboxes li label {
+    display: block;
+    padding: 1px 18px;
+}
+
+.exam-checkboxes fieldset ul li input {
+    float: left;
+    width: auto;
+}
