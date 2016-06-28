@@ -158,7 +158,7 @@ class LabgenevetModelRequest extends JModelAdmin
                 array_push($examsList, $exam);
             }
         }
-		$data['total'] = $this->getRelatedModel('Exams')->getTotalPrice($examsList);
+		//$data['total'] = $this->getRelatedModel('Exams')->getTotalPrice($examsList);
         $data['totalexams'] = count($examsList);
         $this->getRelatedModel('Examslist')->save($data['id'], $examsList);
 
