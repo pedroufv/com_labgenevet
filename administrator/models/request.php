@@ -149,7 +149,8 @@ class LabgenevetModelRequest extends JModelAdmin
         $inputArray = $input->post->getArray();
         $jformArray = $inputArray['jform'];
 
-        $this->getRelatedModel('Animal')->save($data['animals']);
+		$this->getRelatedModel('Animal')->save($data['animals']);
+		$data['animalsid'] = isset($data['animals']['id']) ? $data['animals']['id'] : $this->getRelatedModel('Animal')->getLastInsertId();
         $this->getRelatedModel('Containerslist')->save($data['id'], $data['containerslist']);
         $examsListCategory = $jformArray['examslist'];
         $examsList = array();
