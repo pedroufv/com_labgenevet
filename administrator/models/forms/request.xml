@@ -9,6 +9,11 @@
                class="readonly"
                description="JGLOBAL_FIELD_ID_DESC"
         />
+        <field name="internal_code"
+               type="text"
+               label="COM_LABGENEVET_FORM_LBL_INTERNAL_CODE"
+               description="COM_LABGENEVET_FORM_DESC_INTERNAL_CODE"
+        />
         <field name="info"
                type="textarea"
                label="COM_LABGENEVET_FORM_LBL_INFO"

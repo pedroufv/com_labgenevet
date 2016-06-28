@@ -78,6 +78,10 @@ $document->addStyleSheet('components/com_labgenevet/assets/css/labgenevet.css');
                         <div class="controls"><?php echo $this->form->getInput('urgent'); ?></div>
                     </div>
                     <div class="span4 control-group">
+                        <div class="control-label"><?php echo $this->form->getLabel('internal_code'); ?></div>
+                        <div class="controls"><?php echo $this->form->getInput('internal_code'); ?></div>
+                    </div>
+                    <div class="span4 control-group">
                         <div class="control-label"><?php echo $this->form->getLabel('created'); ?></div>
                         <div class="controls"><?php echo $this->form->getInput('created'); ?></div>
                     </div>

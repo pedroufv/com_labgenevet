@@ -20,6 +20,7 @@ CREATE TABLE IF NOT EXISTS `#__labgenevet_requests` (
   `clinicsid`        INT(11)          NOT NULL,
   `situationsid`     INT(11)          NOT NULL,
   `filename`         VARCHAR(255)     NOT NULL,
+  `internal_code`    VARCHAR(255)     NULL,
   `info`             TEXT             NOT NULL,
   `created`          DATETIME         NOT NULL DEFAULT '0000-00-00 00:00:00',
   `urgent`           BOOLEAN          NOT NULL DEFAULT FALSE,
