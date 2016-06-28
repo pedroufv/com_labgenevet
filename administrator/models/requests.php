@@ -135,19 +135,19 @@ class LabgenevetModelRequests extends JModelList
 				$query->where('a.id = ' . (int) substr($search, 3));
 			} else {
 				$search = $db->Quote('%' . $db->escape($search, true) . '%');
-				$query->where('( a.`animalsid` LIKE '.$search.' OR  a.`situationsid` LIKE '.$search.' )');
+				$query->where('( `animalsid`.name LIKE '.$search.' OR  `situationsid`.title LIKE '.$search.' )');
 			}
 		}
 
-        $filter_situationsid = $this->state->get("filter.situationsid");
-        if ($filter_situationsid) {
-            $query->where("a.`situationsid` = '".$db->escape($filter_situationsid)."'");
-        }
+		$filter_situationsid = $this->state->get("filter.situationsid");
+		if ($filter_situationsid) {
+			$query->where("`situationsid`.title = '".$db->escape($filter_situationsid)."'");
+		}
 
-        $filter_animalsid = $this->state->get("filter.animalsid");
-        if ($filter_animalsid) {
-            $query->where("a.`animalsid` = '".$db->escape($filter_animalsid)."'");
-        }
+		$filter_animalsid = $this->state->get("filter.animalsid");
+		if ($filter_animalsid) {
+			$query->where("`animalsid`.name = '".$db->escape($filter_animalsid)."'");
+		}
 
 		// Add the list ordering clause.
 		$orderCol = $this->state->get('list.ordering');
