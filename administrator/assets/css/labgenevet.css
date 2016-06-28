@@ -52,6 +52,29 @@
     font-weight: bold;
 }
 
+/*
 .exam-checkboxes fieldset ul li input {
     margin: 2px 6px;
+}*/
+
+.exam-category{
+    margin-bottom:10px;
 }
+.exam-checkboxes{
+    margin-bottom:15px;
+}
+.exam-checkboxes label.checkbox {
+    width: 40%;
+    float:left;
+    position:relative;
+    pardding-left: 10%;
+    margin-right:4%;
+    margin-bottom:10px;
+}
+.exam-checkboxes label.checkbox input{
+    width:10%;
+    display: inline-block;
+    position:absolute;
+    left:2px;
+}
+

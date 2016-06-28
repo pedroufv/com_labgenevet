@@ -42,7 +42,6 @@
             <menu link="option=com_labgenevet&amp;view=exams" view="exams" img="components/com_labgenevet/assets/images/s_exams.png" alt="Labgenevet/Exams">COM_LABGENEVET_EXAMS</menu>
             <menu link="option=com_categories&amp;extension=com_labgenevet" view="categories" img="components/com_labgenevet/assets/images/s_exames.png" alt="Labgenevet/Categories">COM_LABGENEVET_CATEGORIES</menu>
             <menu link="option=com_labgenevet&amp;view=containers" view="containers" img="components/com_labgenevet/assets/images/s_containers.png" alt="Labgenevet/Containers">COM_LABGENEVET_CONTAINERS</menu>
-            <menu link="option=com_labgenevet&amp;view=situations" view="situations" img="components/com_labgenevet/assets/images/s_situations.png" alt="Labgenevet/Situations">COM_LABGENEVET_SITUATIONS</menu>
             <menu link="option=com_labgenevet&amp;view=species" view="species" img="components/com_labgenevet/assets/images/s_species.png" alt="Labgenevet/Species">COM_LABGENEVET_SPECIES</menu>
             <menu link="option=com_labgenevet&amp;view=breeds" view="breeds" img="components/com_labgenevet/assets/images/s_breeds.png" alt="Labgenevet/Breeds">COM_LABGENEVET_BREEDS</menu>
         </submenu>
